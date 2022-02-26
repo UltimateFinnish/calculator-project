@@ -1,1 +1,2 @@
 # calculator-project
+This project is at the end of the introductory foundations of 'The Odin Project', learning html, css and javascript so far. This will be a project that tests my abilities, knowledge (and googling abilities! ;D). Hopefully this project will help me understand how much I've actually grasped from the lessons that 'The Odin Project' has provided me. 
