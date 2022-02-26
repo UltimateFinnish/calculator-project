@@ -38,4 +38,21 @@ function divide() {
     console.log(quotient);
     return quotient;
 }
+operate();
 
+function operate() {
+    let num1 = prompt("Type a number: ");
+    let operand = prompt("Type an operand (+) (-) (*) (/): ");
+    let num2 = prompt("Type another number: ");
+    let result;
+    if ( operand == "+") {
+        result = add(num1, num2);
+    } else if (operand == "-") {
+        result = subtract(num1, num2);
+    } else if (operand == "*") {
+        result = multiply(num1,num2);
+    } else if (operand == "/") {
+        result = divide(num1,num2);
+    }
+    alert(result);
+}
