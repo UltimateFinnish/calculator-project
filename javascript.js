@@ -8,7 +8,6 @@ function add() {
     for (let i = 0; i < arguments.length; i++) {
         sum += arguments[i];
     }
-    console.log(sum);
     return sum;
 }
 function subtract() {
@@ -16,7 +15,6 @@ function subtract() {
     for (let i = 1; i < arguments.length; i++) {
         difference -= arguments[i];
     }
-    console.log(difference);
     return difference;
 }
 
@@ -26,7 +24,6 @@ function multiply() {
     for (let i = 0; i < arguments.length; i++) {
         product *= arguments[i];
     }
-    console.log(product);
     return product;
 }
 
@@ -35,7 +32,6 @@ function divide() {
     for (let i = 1; i < arguments.length; i++){
         quotient /= arguments[i];
     }
-    console.log(quotient);
     return quotient;
 }
 operate();
