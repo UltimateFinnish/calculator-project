@@ -37,9 +37,9 @@ function divide() {
 // operate();
 
 function operate() {
-    //let num1 = prompt("Type a number: ");
-    //let operand = prompt("Type an operand (+) (-) (*) (/): ");
-    //let num2 = prompt("Type another number: ");
+    let num1 = 0;
+    let operand = 0;
+    let num2 = 0;
     let result;
     if ( operand == "+") {
         result = add(num1, num2);
@@ -50,23 +50,36 @@ function operate() {
     } else if (operand == "/") {
         result = divide(num1,num2);
     }
-    alert(result);
+    //alert(result);
 }
 
-document.addEventListener('keydown', e => console.log(e.key));
+// document.addEventListener('keydown', e => console.log(e.key));
 
-numberButtons = document.querySelectorAll('[data-number');
-console.log(numberButtons);
 
-let text = document.querySelector('[data-current-operand]');
+numberButtons = document.querySelectorAll('[data-number'); //Assigns Number buttons
+operandButtons = document.querySelectorAll('[data-operation]'); //Assigns operator buttons
+
+let text = document.querySelector('[data-current-operand]'); //Takes keyboard input
 document.addEventListener('keydown', e => {
     text.textContent += e.key;
 });
-numberButtons.forEach(button => {
+
+numberButtons.forEach(button => {      //Takes number button input
     button.addEventListener('click', () => {
         text.textContent += button.innerText;
     })    
 });
+
+operandButtons.forEach(button => {      //Takes operation button input
+    button.addEventListener('click', () => {
+        text.textContent += button.innerText;
+    })
+})
+
+
+console.log(text.textContent);
+
+
 
 /*let numberButt = document.querySelectorAll('[data-number]');
 console.log(numberButt);
