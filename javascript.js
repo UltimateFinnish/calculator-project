@@ -54,3 +54,8 @@ function operate() {
 }
 
 document.addEventListener('keydown', e => console.log(e.key));
+
+document.addEventListener('keydown', e => {
+    let text = document.getElementById('display');
+    text.innerHTML += e.key;
+});
