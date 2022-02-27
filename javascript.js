@@ -57,5 +57,23 @@ document.addEventListener('keydown', e => console.log(e.key));
 
 document.addEventListener('keydown', e => {
     let text = document.getElementById('display');
-    text.innerHTML += e.key;
+    text.textContent += e.key;
 });
+
+let numberButt = document.querySelectorAll('[data-number]');
+console.log(numberButt);
+
+const numberButtons = document.querySelectorAll('[data-number]');
+const operationButtons = document.querySelectorAll('[data-operation]');
+const equalsButton = document.querySelector('[data-equals]');
+const deleteButton = document.querySelector('[data-delete]');
+const clearButton = document.querySelector('[data-clear]');
+const previousOperandTextElement = document.querySelector('[data-previous-operand]');
+const currentOperandTextElement = document.querySelector('[data-current-operand]');
+
+class Calculator {
+    constructor(previousOperandTextElement, currentOperandTextElement) {
+        this.previousOperandTextElement = previousOperandTextElement;
+        this.currentOperandTextElement = currentOperandTextElement;
+    }
+}
