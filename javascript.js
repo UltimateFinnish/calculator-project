@@ -58,26 +58,34 @@ function operate() {
 
 numberButtons = document.querySelectorAll('[data-number'); //Assigns Number buttons
 operandButtons = document.querySelectorAll('[data-operation]'); //Assigns operator buttons
+equalsButton = document.querySelector('[data-equals]'); //Assigns equals button
 
-let text = document.querySelector('[data-current-operand]'); //Takes keyboard input
-document.addEventListener('keydown', e => {
-    text.textContent += e.key;
+let textDisplay = document.querySelector('[data-current-operand]');
+
+document.addEventListener('keydown', e => { //Takes keyboard input
+    textDisplay.textContent += e.key;
 });
 
 numberButtons.forEach(button => {      //Takes number button input
     button.addEventListener('click', () => {
-        text.textContent += button.innerText;
+        textDisplay.textContent += button.innerText;
     })    
 });
 
+
+
 operandButtons.forEach(button => {      //Takes operation button input
     button.addEventListener('click', () => {
-        text.textContent += button.innerText;
+        let numArray = textDisplay.textContent.split(" ");
+        textDisplay.textContent +=  ' ' + button.innerText + ' ';
+        console.log(numArray);
     })
 })
 
+equalsButton.addEventListener('click', () => {
+    textDisplay.textContent += ' ' + equalsButton.innerText + ' ';
+})
 
-console.log(text.textContent);
 
 
 
