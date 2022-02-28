@@ -36,10 +36,19 @@ function divide() {
 }
 // operate();
 
-function operate() {
+function operate(arrayFromDisplay) {
+
     let num1 = 0;
     let operand = 0;
     let num2 = 0;
+
+    console.log(arrayFromDisplay);
+
+    for (i = 0; i < arrayFromDisplay.length; i++) {
+        let num = arrayFromDisplay[i];
+        console.log(num);
+    }
+
     let result;
     if ( operand == "+") {
         result = add(num1, num2);
