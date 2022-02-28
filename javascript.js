@@ -76,14 +76,15 @@ numberButtons.forEach(button => {      //Takes number button input
 
 operandButtons.forEach(button => {      //Takes operation button input
     button.addEventListener('click', () => {
-        let numArray = textDisplay.textContent.split(" ");
         textDisplay.textContent +=  ' ' + button.innerText + ' ';
-        console.log(numArray);
     })
 })
 
 equalsButton.addEventListener('click', () => {
+    let numArray = textDisplay.textContent.split(" ");
     textDisplay.textContent += ' ' + equalsButton.innerText + ' ';
+    console.log(numArray.length);
+    operate(numArray);
 })
 
 
