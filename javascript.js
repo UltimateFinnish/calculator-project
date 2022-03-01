@@ -66,7 +66,7 @@ function calculate(ray) {
     for (i = 0; i < ray.length; i++) {
         if (isNaN(ray[i])) {
             console.log("This is an operand");
-            console.log(eval(ray[i-1] + ray[i] + ray[i+1]));
+            console.log(ray[i-1] + ray[i] + ray[i+1]);
         } else {
             console.log("This is not");
         }
