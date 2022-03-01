@@ -34,7 +34,6 @@ function divide() {
     }
     return quotient;
 }
-// operate();
 
 function operate(arrayFromDisplay) {
 
@@ -43,8 +42,9 @@ function operate(arrayFromDisplay) {
     let num2 = 0;
 
     console.log(arrayFromDisplay);
-
-    for (i = 0; i < arrayFromDisplay.length; i++) {
+    let size =  Object.keys(arrayFromDisplay).length;
+    console.log(size);
+    for (i = 0; i < size; i++) {
         let num = arrayFromDisplay[i];
         console.log(num);
     }
@@ -60,6 +60,17 @@ function operate(arrayFromDisplay) {
         result = divide(num1,num2);
     }
     //alert(result);
+}
+
+function calculate(ray) {
+    for (i = 0; i < ray.length; i++) {
+        if (isNaN(ray[i])) {
+            console.log("This is an operand");
+            console.log(ray[i-1] - ray[i+1]);
+        } else {
+            console.log("This is not");
+        }
+    }
 }
 
 // document.addEventListener('keydown', e => console.log(e.key));
@@ -91,9 +102,15 @@ operandButtons.forEach(button => {      //Takes operation button input
 
 equalsButton.addEventListener('click', () => {
     let numArray = textDisplay.textContent.split(" ");
+    let numArray2 = {};
+    for (i = 0; i < numArray.length; i++) {
+        numArray2[i] = numArray[i];
+    }
     textDisplay.textContent += ' ' + equalsButton.innerText + ' ';
-    console.log(numArray.length);
-    operate(numArray);
+    console.log(numArray);
+    console.log(numArray2);
+    // operate(numArray2);
+    calculate(numArray);
 })
 
 
